@@ -151,5 +151,52 @@ body{
 /*PILOTOS*/
 
 
+/* RESPONSIVE PARA CELULARES */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 20px;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-container ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .logo {
+        width: 100px;
+        height: auto;
+    }
+
+    .pages {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pages li {
+        width: 40vw; /* Cada item ocupa 40% del ancho en celulares */
+        height: 40vh;
+        padding-top: 200px;
+        opacity: 1; /* Hacemos que ya se vean bien sin hover en móviles */
+    }
+
+    .page-footer p,
+    .page-footer a {
+        font-size: 9px;
+    }
+
+    .nav-container .icons {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+}
 
 

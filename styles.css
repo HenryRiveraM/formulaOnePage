@@ -243,3 +243,47 @@ html{
     color: #fff;
 
 }
+
+/* RESPONSIVE PARA CELULARES - NAVBAR HORIZONTAL */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: row; /* Seguimos en fila */
+        flex-wrap: wrap; /* Permitimos que se acomode si falta espacio */
+        height: auto;
+        padding: 10px 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-container .menu {
+        flex-direction: row; /* Mantener horizontal */
+        flex-wrap: wrap; /* Permitir salto si se llena */
+        gap: 10px;
+        justify-content: center;
+        width: auto;
+    }
+
+    .nav-container .icons {
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    .pages li {
+        padding-top: 200px;
+        padding-bottom: 20px;
+    }
+
+    .page-info h1 {
+        font-size: 32px; /* Texto más pequeño */
+    }
+
+    .page-footer .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .page-footer .buttons button {
+        padding: 10px 40px;
+    }
+}
+

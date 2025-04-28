@@ -157,5 +157,50 @@ body{
 }
 
 
+/* RESPONSIVE PARA CELULARES */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 20px;
+        justify-content: center;
+        gap: 10px;
+    }
 
+    .nav-container ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        font-size: 14px;
+    }
 
+    .logo {
+        width: 100px;
+        height: auto;
+    }
+
+    .pages {
+        flex-direction: column;
+    }
+
+    .pages li {
+        width: 100vw; /* Cada página ocupa toda la pantalla en celulares */
+        height: 100vh;
+        padding-top: 200px;
+    }
+
+    .page-info h1 {
+        font-size: 24px;
+    }
+
+    .page-footer p,
+    .page-footer a {
+        font-size: 10px;
+    }
+
+    .nav-container .icons {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+}

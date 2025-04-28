@@ -235,3 +235,73 @@ body{
 #Isack{
     color: rgb(227, 1, 24);
 }
+
+
+/* RESPONSIVE PARA CELULARES */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 20px;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-container ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .logo {
+        width: 100px;
+        height: auto;
+    }
+
+    .pages {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pages li {
+        width: 100vw; /* Cada item ocupa 40% del ancho en celulares */
+        height: 50vh;
+        padding-top: 200px;
+        opacity: 1; /* Hacemos que ya se vean bien sin hover en móviles */
+    }
+
+    .page-footer p,
+    .page-footer a {
+        font-size: 9px;
+    }
+
+    .nav-container .icons {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .flag{
+        color: rgb(255, 135, 0);
+        font-size: 100px;
+        font-style: italic;
+        
+    }
+
+    .driver-info h1 {
+        font-size: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .info-grid {
+        display: grid;
+        grid-template-columns: max-content auto;
+        gap: 10px 30px;
+        font-size: 10px;
+    }
+}
