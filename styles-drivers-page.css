@@ -23,6 +23,11 @@ html{
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
+
 *{
     /* font-family: poppins, sans-serif; */
     font-family: 'F1 Regular', sans-serif;
@@ -104,11 +109,13 @@ body{
 } 
 
 .pages li{
+    flex: 0 0 12.5%; /* Ocupar 12.5% exacto del contenedor */
+    max-width: 12.5%;
     position: relative;
     display: flex;
     flex-direction: column;
     height: 50vh;
-    width: 12.5vw;
+    /* width: 12.5vw; */
     justify-content: space-between;
     padding-top: 150px;
     padding-bottom: 10px;

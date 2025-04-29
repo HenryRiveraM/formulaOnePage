@@ -23,6 +23,10 @@ html{
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 *{
     /* font-family: poppins, sans-serif; */
     font-family: 'F1 Regular', sans-serif;
@@ -104,6 +108,8 @@ body{
 } 
 
 .pages li{
+    flex: 0 0 50%;
+    max-width: 50%;
     position: relative;
     display: flex;
     flex-direction: column;

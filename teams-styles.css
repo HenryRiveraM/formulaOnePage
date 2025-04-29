@@ -22,6 +22,10 @@ html{
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 *{
     /* font-family: poppins, sans-serif; */
     font-family: 'F1 Regular', sans-serif;
@@ -100,14 +104,16 @@ body{
     list-style: none;
     text-align: center;
     flex-direction: row;
+    align-items: stretch; 
 } 
 
-.pages li{
+.pages li {
+    flex: 0 0 50%; /* Esto significa "no crecer, no encoger, ocupar 50%" */
+    max-width: 50%;
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 50vw;
     justify-content: space-between;
     padding-top: 150px;
     padding-bottom: 10px;
