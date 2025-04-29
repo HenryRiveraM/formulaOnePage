@@ -175,6 +175,8 @@ body{
     grid-template-columns: max-content auto;
     gap: 10px 30px;
     font-size: 20px;
+    max-height: calc(100vh - 100px - 300px); /* Resta el tamaño del h1 y el margin */
+    overflow-y: auto;
 }
 
 .info-grid div {
