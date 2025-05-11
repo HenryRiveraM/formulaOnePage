@@ -163,8 +163,8 @@ body{
 }
 
 .driver-info h1 {
-    font-size: 100px;
-    margin-bottom: 300px;
+    font-size: 80px;
+    margin-bottom: 72px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -174,14 +174,14 @@ body{
     display: grid;
     grid-template-columns: max-content auto;
     gap: 10px 30px;
-    font-size: 20px;
-    max-height: calc(100vh - 100px - 300px); /* Resta el tamaño del h1 y el margin */
+    font-size: 15px;
+    /* max-height: calc(100vh - 100px - 300px); Resta el tamaño del h1 y el margin */
     overflow-y: auto;
 }
 
-.info-grid div {
+/* .info-grid div {
     line-height: 1.6;
-}
+} */
 
 .prueba {
     position: fixed;
@@ -313,3 +313,5 @@ body{
         font-size: 10px;
     }
 }
+
+
