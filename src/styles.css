@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'F1 Regular';
+    src: url('assets/fonts/Formula1-Regular.woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'F1 Bold';
+    src: url('assets/fonts/Formula1-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'F1 Wide';
+    src: url('assets/fonts/Formula1-Wide.woff') format('woff');
+    font-weight: normal;
+}
+
+*{
+    /* font-family: poppins, sans-serif; */
+    font-family: 'F1 Regular', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html, body {
+    overflow-x: hidden;
+}
