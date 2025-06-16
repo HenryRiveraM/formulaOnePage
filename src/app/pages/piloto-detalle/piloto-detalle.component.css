@@ -1,0 +1,168 @@
+.pages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+    flex-direction: row;
+} 
+
+.pages li{
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 50vw;
+    justify-content: space-between;
+    padding-top: 150px;
+    padding-bottom: 10px;
+    color: #fff;
+    scroll-snap-align: start;
+}
+
+.pages li video,
+.pages li img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+} 
+
+.page-footer p,
+.page-footer a{
+    font-size: 12px;
+    color: #fff;
+
+}
+/*ACA */
+
+.pages li {
+    transition: transform 0.3s ease, width 0.3s ease;
+    
+}
+
+.pages li:hover {
+    transform: scale(1.03);
+    z-index: 2;
+}
+
+
+.driver-info {
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;  
+    text-align: right; 
+}
+
+.driver-info h1 {
+    font-size: 80px;
+    margin-bottom: 72px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: 10px 30px;
+    font-size: 15px;
+    /* max-height: calc(100vh - 100px - 300px); Resta el tamaño del h1 y el margin */
+    overflow-y: auto;
+}
+
+/* .info-grid div {
+    line-height: 1.6;
+} */
+
+.prueba {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 50vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.flag{
+    color: rgb(255, 135, 0);
+    font-size: 120px;
+    font-style: italic;
+    
+}
+
+@media (max-width: 768px) {
+    .pages li {
+        padding-top: 100px;
+        padding-bottom: 10px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .page-info h1 {
+        font-size: 10px; /* Texto más pequeño */
+    }
+
+    .page-footer .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .page-footer .buttons button {
+        padding: 10px 40px;
+    }
+
+    .driver-info h1 {
+    font-size: 25px;
+    margin-bottom: 72px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+}
+
+@media (max-width: 915px){
+    .driver-info h1 {
+        font-size: 30px;
+        margin-bottom: 72px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .flag{
+    color: rgb(255, 135, 0);
+    font-size: 45px;
+    font-style: italic;
+    
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: 10px 30px;
+    font-size: 10px;
+    /* max-height: calc(100vh - 100px - 300px); Resta el tamaño del h1 y el margin */
+    overflow-y: auto;
+}
+
+.driver-info {
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;  
+    text-align: right; 
+}
+}
+

@@ -1,0 +1,14 @@
+<body>
+<ul class="pages">
+        <li *ngFor="let piloto of pilotos">
+            <a [routerLink]="['/drivers', piloto.slug]">
+                <img [src]="piloto.imagen" [alt]="piloto.nombre">
+            </a>
+            <div class="page-footer">
+                <p>© All rights reserved. Subject to change without notice. Available in select regions.
+                    <a href="#">See details</a>
+                </p>
+            </div>
+        </li>
+</ul>
+</body>

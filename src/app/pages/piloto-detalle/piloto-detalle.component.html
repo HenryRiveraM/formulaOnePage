@@ -1,0 +1,35 @@
+<!-- piloto-detalle.component.html -->
+<ul class="pages">
+  <li>
+    <!-- Imagen de fondo o principal del piloto -->
+    <img [src]="piloto.imagen" [alt]="'Foto de ' + piloto.nombre" />
+    <div class="page-info">
+      <!-- Si se desea agregar más info general -->
+    </div>
+    <div class="page-footer">
+      <p>
+        © All rights reserved. Subject to change without notice. Available in select regions.
+        <a href="#" target="_blank" rel="noopener noreferrer">See details</a>
+      </p>
+    </div>
+  </li>
+
+  <li>
+    <!-- Logo del equipo -->
+    <img [src]="piloto.escudo" [alt]="'Logo de ' + piloto.equipo" />
+    <div class="driver-info">
+      <h1>
+        {{ piloto.nombre }}
+        <span class="flag" [ngStyle]="{ color: piloto.color }">{{ piloto.numero }}</span>
+      </h1>
+      <div class="info-grid">
+        <div><strong>Team:</strong></div><div>{{ piloto.equipo }}</div>
+        <div><strong>Country:</strong></div><div>{{ piloto.pais }}</div>
+        <div><strong>Podiums:</strong></div><div>{{ piloto.estadisticas.podios }}</div>
+        <div><strong>Points:</strong></div><div>{{ piloto.estadisticas.puntos }}</div>
+        <div><strong>Grands Prix entered:</strong></div><div>{{ piloto.estadisticas.gps }}</div>
+        <div><strong>World Championships:</strong></div><div>{{ piloto.estadisticas.campeonatos }}</div>
+      </div>
+    </div>
+  </li>
+</ul>
