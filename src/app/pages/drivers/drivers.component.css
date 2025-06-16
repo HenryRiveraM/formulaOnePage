@@ -61,52 +61,24 @@ body {
 
 /*PILOTOS*/
 
-
-/* RESPONSIVE PARA CELULARES */
 @media (max-width: 768px) {
-    .nav-container {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 10px 20px;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .nav-container ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        font-size: 14px;
-    }
-
-    .logo {
-        width: 100px;
-        height: auto;
-    }
-
-    .pages {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     .pages li {
-        width: 40vw; /* Cada item ocupa 40% del ancho en celulares */
-        height: 40vh;
         padding-top: 200px;
-        opacity: 1; /* Hacemos que ya se vean bien sin hover en móviles */
+        padding-bottom: 20px;
+        flex: 0 0 25%; /* Ocupar 12.5% exacto del contenedor */
+        max-width: 25%;
     }
 
-    .page-footer p,
-    .page-footer a {
-        font-size: 9px;
+    .page-info h1 {
+        font-size: 32px; /* Texto más pequeño */
     }
 
-    .nav-container .icons {
-        justify-content: center;
-        width: 100%;
-        margin-top: 10px;
+    .page-footer .buttons {
+        flex-direction: column;
+        gap: 10px;
     }
 
+    .page-footer .buttons button {
+        padding: 10px 40px;
+    }
 }
-

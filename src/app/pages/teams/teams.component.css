@@ -63,51 +63,24 @@
     z-index: 2;
 }
 
-
-/* RESPONSIVE PARA CELULARES */
 @media (max-width: 768px) {
-    .nav-container {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 10px 20px;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .nav-container ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        font-size: 14px;
-    }
-
-    .logo {
-        width: 100px;
-        height: auto;
-    }
-
-    .pages {
-        flex-direction: column;
-    }
-
     .pages li {
-        width: 100vw; /* Cada página ocupa toda la pantalla en celulares */
-        height: 100vh;
         padding-top: 200px;
+        padding-bottom: 20px;
+        flex: 0 0 100%; /* Esto significa "no crecer, no encoger, ocupar 100%" */
+        max-width: 100%;
     }
 
     .page-info h1 {
-        font-size: 24px;
+        font-size: 32px; /* Texto más pequeño */
     }
 
-    .page-footer p,
-    .page-footer a {
-        font-size: 10px;
+    .page-footer .buttons {
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .nav-container .icons {
-        justify-content: center;
-        width: 100%;
-        margin-top: 10px;
+    .page-footer .buttons button {
+        padding: 10px 40px;
     }
 }

@@ -2,6 +2,8 @@
         <a [routerLink]="['/home']">
             <img src="assets/images/index/F1_75_Logo.png" alt="Logo de F1" class="logo">
         </a>
+        
+
         <ul class="menu">
             <li><a [routerLink]="['/teams']"  class="nav-button">Teams</a>
                 <ul class="dropdown">
@@ -39,72 +41,21 @@
             </li>
             <li><a [routerLink]="['/drivers']" class="nav-button">Drivers</a>
                 <ul class="dropdown">
-                    <li><a href="html-drivers/piastri.html">
-                        <img id="drivers" src="assets/images/drivers/oscpia01.avif" alt="Oscar Piastri Piloto">
-                        Oscar Piastri</a></li>
-                    <li><a href="html-drivers/lando.html">
-                        <img id="drivers" src="assets/images/drivers/lannor01.avif" alt="Lando Norris Piloto">
-                        Lando Norris</a></li>
-                    <li><a href="html-drivers/ver.html">
-                        <img id="drivers" src="assets/images/drivers/maxver01.avif" alt="Max Verstappen Piloto">
-                        Max Verstappen</a></li>
-                    <li><a href="html-drivers/russell.html">
-                        <img id="drivers" src="assets/images/drivers/georus01.avif" alt="George Russell Piloto">
-                        George Russell</a></li>
-                    <li><a href="html-drivers/lec.html">
-                        <img id="drivers" src="assets/images/drivers/chalec01.avif" alt="Charles Leclerc Piloto">
-                        Charles Leclerc</a></li>
-                    <li><a href="html-drivers/kimi.html">
-                        <img id="drivers" src="assets/images/drivers/andant01.avif" alt="Kimi Antonelli Piloto">
-                        Kimi Antonelli</a></li>
-                    <li><a href="html-drivers/hamilton.html">
-                        <img id="drivers" src="assets/images/drivers/lewham01.avif" alt="Lewis Hamilton Piloto">
-                        Lewis Hamilton</a></li>
-                    <li><a href="html-drivers/albon.html">
-                        <img id="drivers" src="assets/images/drivers/alealb01.avif" alt="Alexander Albon Piloto">
-                        Alexander Albon</a></li>
-                    <li><a href="html-drivers/ocon.html">
-                        <img id="drivers" src="assets/images/drivers/estoco01.avif" alt="Esteban Ocon Piloto">
-                        Esteban Ocon</a></li>
-                    <li><a href="html-drivers/stroll.html">
-                        <img id="drivers" src="assets/images/drivers/lanstr01.avif" alt="Lance Stroll Piloto">
-                        Lance Stroll</a></li>
-                    <li><a href="html-drivers/gasly.html">
-                        <img id="drivers" src="assets/images/drivers/piegas01.avif" alt="Pierre Gasly Piloto">
-                        Pierre Gasly</a></li>
-                    <li><a href="html-drivers/nico.html">
-                        <img id="drivers" src="assets/images/drivers/nichul01.avif" alt="Nico Hulkenberg Piloto">
-                        Nico Hulkenberg</a></li>
-                    <li><a href="html-drivers/bearman.html">
-                        <img id="drivers" src="assets/images/drivers/olibea01.avif" alt="Olive Bearman Piloto">
-                        Olive Bearman</a></li>
-                    <li><a href="html-drivers/isack.html">
-                        <img id="drivers" src="assets/images/drivers/isahad01.avif" alt="Isack Hadjar Piloto">
-                        Isack Hadjar</a></li>
-                    <li><a href="html-drivers/sainz.html">
-                        <img id="drivers" src="assets/images/drivers/carsai01.avif" alt="Carlos Sainz Piloto">
-                        Carlos Sainz</a></li>
-                    <li><a href="html-drivers/yuki.html">
-                        <img id="drivers" src="assets/images/drivers/yuktsu01.avif" alt="Yuki Tsunoda Piloto">
-                        Yuki Tsunoda</a></li>
-                    <li><a href="html-drivers/alonso.html">
-                        <img id="drivers" src="assets/images/drivers/feralo01.avif" alt="Fernando Alonso Piloto">
-                        Fernando Alonso</a></li>
-                    <li><a href="html-drivers/liam.html">
-                        <img id="drivers" src="assets/images/drivers/lialaw01.avif" alt="Liam Lawson Piloto">
-                        Liam Lawson</a></li>
-                    <li><a href="html-drivers/doohan.html">
-                        <img id="drivers" src="assets/images/drivers/jacdoo01.avif" alt="Jack Doohan Piloto">
-                        Jack Doohan</a></li>
-                    <li><a href="html-drivers/gabriel.html">
-                        <img id="drivers" src="assets/images/drivers/gabbor01.avif" alt="Gabriel Bortoleto Piloto">
-                        Gabriel Bortoleto</a></li>
+                    <li *ngFor="let piloto of dropdownPilotos">
+                        <a [routerLink]="['/drivers', piloto.slug]">
+                            <img id="drivers" [src]="piloto.imagen" [alt]="piloto.nombre + ' Piloto'">
+                            {{ piloto.nombre }}
+                        </a>
+                    </li>
                 </ul>
             </li>
+
             <li>News</li>
             <li>Dicover</li>
             <li>Shop</li>
-        </ul>
+        </ul> <!-- Cierre correcto del menú -->
+
+
         <div class="icons">
             <i class='bx bx-help-circle'></i>
             <i class='bx bx-globe' ></i>
